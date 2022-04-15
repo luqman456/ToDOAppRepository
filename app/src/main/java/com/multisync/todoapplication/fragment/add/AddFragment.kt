@@ -1,16 +1,12 @@
 package com.multisync.todoapplication.fragment.add
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.*
-import android.widget.EditText
-import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.multisync.todoapplication.R
-import com.multisync.todoapplication.data.models.Priority
 import com.multisync.todoapplication.data.models.ToDoData
 import com.multisync.todoapplication.data.viewmodel.ToDoViewModel
 import com.multisync.todoapplication.fragment.SharedViewModel

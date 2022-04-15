@@ -12,8 +12,7 @@ import com.multisync.todoapplication.data.models.Priority
 
 class SharedViewModel(application: Application) : AndroidViewModel(application) {
 
-    val listener: AdapterView.OnItemSelectedListener = object :
-        AdapterView.OnItemSelectedListener {
+    val listener: AdapterView.OnItemSelectedListener = object : AdapterView.OnItemSelectedListener {
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             when (position) {
                 0 -> {
@@ -58,6 +57,14 @@ class SharedViewModel(application: Application) : AndroidViewModel(application) 
             }
             else -> Priority.LOW
 
+        }
+    }
+
+     fun parsePriorityToInt(priority: Priority): Int{
+        return when(priority){
+            Priority.HIGH -> 0
+            Priority.MEDIUM -> 1
+            Priority.LOW -> 2
         }
     }
 }
